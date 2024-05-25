@@ -25,21 +25,25 @@ body {
 }
 
 .cabecalho {
-  padding: 2% 0% 2% 30%;
+  width: 100%;
+  padding: 2% 0% 2% 2%;
   display: flex;
+  justify-content: center;
+  /* background-color: blue; */
 }
 
 .cabecalho__menu {
   display: flex;
-  gap: 80px;
-  width: 100%;
+  gap: 5rem;
+  width: auto;
   align-items: center;
+  /* background-color: green; */
 }
 
 .cabecalho__menu__link {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   font-family: var(--fonte-primaria);
   font-size: 1.5rem;
   font-weight: 400;
@@ -47,9 +51,13 @@ body {
   color: var(--cor-terciaria);
 }
 
+.cabecalho__menu__link:hover {
+  text-decoration: underline 2px;
+}
+
 .conteudo {
   display: flex;
-  padding: 5%;
+  padding: 5% 10% 10% 10%;
   justify-content: space-between;
   gap: 12.5rem;
 }
@@ -73,8 +81,6 @@ body {
 .conteudo__subtitulo {
   display: flex;
   align-items: center;
-  flex-direction: column;
-  gap: 30px;
 
   font-family: var(--fonte-primaria);
   font-weight: 400;
@@ -100,7 +106,7 @@ body {
 .conteudo__links__link {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  gap: 0.675rem;
   color: var(--cor-secundaria);
   width: 8.625rem;
   height: 2rem;
@@ -112,9 +118,19 @@ body {
   font-size: 1.5rem;
 }
 
+.conteudo__links__link:hover {
+  background-color: black;
+}
+
 .conteudo__imagem {
   width: 100%;
   padding-top: 5rem;
+}
+
+.imagem__Projeto {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
 }
 
 .rodape {
@@ -128,20 +144,41 @@ body {
 
 @media (max-width: 950px) {
   .conteudo {
+    padding: 5% 5%;
     flex-direction: column-reverse;
     align-items: center;
+    justify-content: center;
   }
 
   .conteudo__sobre {
     padding: 5%;
-    width: auto;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
   }
 
   .cabecalho {
-    padding: 10%;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
   }
 
   .cabecalho__menu {
+    padding: 2%;
+    align-items: center;
     justify-content: center;
+    align-content: center;
+    gap: 1.5rem;
+    width: auto;
+  }
+
+  .cabecalho__menu__link {
+    padding: 2%;
+    width: auto;
+  }
+
+  .conteudo__links__link {
+    padding: 20px;
+    width: 100%;
   }
 }
