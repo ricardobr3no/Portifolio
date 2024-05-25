@@ -181,4 +181,9 @@ body {
     padding: 20px;
     width: 100%;
   }
+
+  .imagem__Projeto {
+    flex-direction: column;
+    width: auto;
+  }
 }
